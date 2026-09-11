@@ -1,8 +1,7 @@
 <go:import ("fmt")/>
 
 <go
-    title := "GHP Example"
-/>
+    title := "GHP Template Test Site" />
 
 <!doctype html>
 <html lang="en">
@@ -16,7 +15,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       background: #0f172a;
       color: #f1f5f9;
@@ -24,7 +23,7 @@
     .card { text-align: center; }
     .btn {
       display: inline-block;
-      margin-top: 1.5rem;
+      margin: 0.75rem 0.25rem;
       padding: 0.75rem 1.5rem;
       background: #38bdf8;
       color: #0f172a;
@@ -36,10 +35,20 @@
   </style>
 </head>
 <body>
-  <div class="card">
+  <main class="card">
     <h1><go= fmt.Sprintf("%s — Home", title) /></h1>
-    <p>Esta é a rota <code>/</code>.</p>
-    <a class="btn" href="/docs">Ir para /docs</a>
-  </div>
+    <p>This is the route <code>/</code>. Every page below is a <code>.ghp</code> file on disk.</p>
+    <nav>
+      <a class="btn" href="/about">About</a>
+      <a class="btn" href="/features">Features</a>
+      <a class="btn" href="/blog">Blog</a>
+      <a class="btn" href="/docs">Docs</a>
+
+    </nav>
+    <go:for i := range 100/>
+        <div>This is a fucking GO:FOR test: <go= i /></div>
+    <go:endfor/>
+  </main>
+
 </body>
 </html>

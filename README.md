@@ -4,8 +4,12 @@ A minimal example project for [GHP](https://github.com/GHP-GoLang-Framework/ghp)
 
 ## Structure
 
-- [`index.ghp`](index.ghp) → `/`
+- [`index.ghp`](index.ghp) → `/` — hub linking every page
+- [`about.ghp`](about.ghp) → `/about`
+- [`features.ghp`](features.ghp) → `/features` — branches, switches and loops
 - [`docs/index.ghp`](docs/index.ghp) → `/docs`
+- [`blog/index.ghp`](blog/index.ghp) → `/blog` — post listing
+- [`blog/[slug].ghp`](blog/[slug].ghp) → `/blog/{slug}` — dynamic post page
 
 ## Running
 
